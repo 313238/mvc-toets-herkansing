@@ -4,4 +4,4 @@
 
 ?>
 
-<a href="http://mvc-toets.org/countries/index"><h1>link</h1></a>
+<a href="http://mvc-toets-herkansing.org/rollercoasters/index"><h1>link</h1></a>
