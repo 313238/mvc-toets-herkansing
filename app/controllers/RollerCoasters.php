@@ -11,18 +11,23 @@ class RollerCoasters extends Controller {
 
     public function index() {
         $RollerCoasters = $this->rollercoasterData->getRollerCoasters();
-        // var_dump($countries);exit();
-
+        
         $rows ="";
 
         foreach($RollerCoasters as $value) {
             
-            $rows .= "<tr><th>$value->id</th></tr>";
-            $rows .= "<tr><td>$value->nameRollerCoaster</td></tr>";
-            $rows .= "<tr><td>$value->nameAmusementPark</td></tr>";
-            $rows .= "<tr><td>$value->country</td></tr>";
-            $rows .= "<tr><td>$value->topspeed</td></tr>";
-            $rows .= "<tr><td>$value->height</td></tr>";
+           
+
+
+
+            $rows .= "<tr>
+                  <td>$value->id</td>
+                  <td>" . htmlentities($value->nameRollerCoaster, ENT_QUOTES, 'ISO-8859-1') . "</td>
+                  <td>" . htmlentities($value->nameAmusementPark, ENT_QUOTES, 'ISO-8859-1') . "</td>
+                  <td>" . htmlentities($value->country, ENT_QUOTES, 'ISO-8859-1') . "</td>
+                  <td>" . number_format($value->topspeed, 0, ',', '.') . "</td>
+                  <td>" . number_format($value->height, 0, ',', '.') . "</td>
+                </tr>";
 
 
         }

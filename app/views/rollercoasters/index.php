@@ -8,7 +8,16 @@
 </head>
 <body>
 <h1>De 5 snelste achtbanen van de wereld.</h1>
-  <table> <?= $data["rollercoasters"]; ?></table>
+  <table>
+      <thead>
+    <th>id</th>
+    <th>Achtbaan</th>
+    <th>Pretpark</th>
+    <th>Land</th>
+    <th>Snelheid</th>
+    <th>Hoogte</th>
+    </thead>
+     <?= $data["rollercoasters"]; ?></table>
    
 </body>
 </html>
